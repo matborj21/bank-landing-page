@@ -1,0 +1,2 @@
+:root{--darkBlue:#2d314d;--limeGreen:#31d35c;--rightCyan:#2bb7da;--grayishBlue:#9698a6;--lightGrayishBlue:#f3f4f6;--veryLightGray:#fafafa;--white:#fff;--font-inter:"Public Sans",sans-serif}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{font-family:var(--font-inter);margin:0;padding:0}h1,h2,h3,h4{margin-top:0}a,a:active,a:visited{text-decoration:none}.navbar{font-size:1.25rem}
+/*# sourceMappingURL=style.css.map */

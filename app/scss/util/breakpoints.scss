@@ -1,0 +1,26 @@
+$breakpoints-up: ( "meduim": "40em", "large": "64em", "xlarge": "87.5em", );
+$breakpoints-down: ( "meduim": '39.937em', "large": "63.937em", "xlarge": "87.437em", );
+
+/*
+  * use break points for mobile first approach
+*/
+
+@mixin breakpoint($size) {
+    @media (min-with: map-get($breakpoints-up, $size)) {
+        @content
+    }
+}
+
+;
+
+/*
+  * use break points for desktop first approach
+*/
+
+@mixin breakpoint-down($size) {
+    @media (max-with: map-get($breakpoints-down, $size)) {
+        @content
+    }
+}
+
+;
