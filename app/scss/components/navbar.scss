@@ -1,4 +1,137 @@
 @use '../util' as *;
 .navbar {
-    font-size: rem(20);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(65);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 rem(25);
+    // background-color: var(--white);
+    z-index: 11;
+    @include breakpoint(medium) {
+        padding: 0 rem(50);
+    }
+    @include breakpoint(large) {
+        padding: 0 rem(105);
+    }
+    @include breakpoint(xlarge) {
+        padding: 0 rem(165);
+    }
+    &__logo {
+        width: rem(140);
+        z-index: 11;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    &__menu {
+        width: rem(25);
+        height: rem(22);
+        padding-top: rem(1);
+        z-index: 11;
+        span {
+            display: block;
+            width: 100%;
+            height: rem(3);
+            background: var(--darkBlue);
+            &:not(:last-child) {
+                margin-bottom: rem(5);
+            }
+        }
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+    // * trigger to show the navlinks in smaller viewport
+    .show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all ease-in-out 300ms;
+    }
+    // * navbar links
+    &__links_container {
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        top: 100%;
+        left: 0;
+        transform: translateY(-10%);
+        font-size: rem(16);
+        background: linear-gradient(var(--darkBlue), rgba(0, 0, 0, 0.3));
+        visibility: hidden;
+        opacity: 0.1;
+        transition: all ease-in-out 100ms;
+        z-index: -1;
+        @include breakpoint(large) {
+            width: auto;
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            transform: translateY(0);
+            background: transparent
+        }
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        margin: rem(25);
+        border-radius: rem(5);
+        background-color: #fff;
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+        .link {
+            position: relative;
+            margin: rem(15) auto;
+            text-transform: capitalize;
+            >a {
+                font-weight: 500;
+                color: var(--grayishBlue);
+            }
+            &:hover:after {
+                position: absolute;
+                content: '';
+                margin-top: rem(18);
+                top: 100%;
+                left: 0;
+                height: rem(5);
+                width: 100%;
+                background: linear-gradient(to right, var(--limeGreen), var(--rightCyan));
+                animation: showUnderline ease-in 100ms;
+            }
+            @include breakpoint(large) {
+                margin-right: rem(30);
+            }
+        }
+        @include breakpoint(large) {
+            background-color: transparent;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    .btn-cta {
+        display: none;
+        padding: rem(10) rem(30);
+        font-size: rem(14);
+        @include breakpoint(large) {
+            display: block;
+        }
+    }
+}
+
+// animation for hover undeline on navbar
+@keyframes showUnderline {
+    0% {
+        transform: scalex(0);
+    }
+    100% {
+        transform: scalex(1);
+    }
 }

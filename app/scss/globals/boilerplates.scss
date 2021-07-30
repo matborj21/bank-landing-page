@@ -1,3 +1,4 @@
+@use '../util/' as *;
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -13,4 +14,26 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-inter);
+    background-color: var(--lightGrayishBlue);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+// style for buttons
+.btn-cta {
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    color: var(--white);
+    text-transform: capitalize;
+    background: linear-gradient(to right, var(--limeGreen), var(--rightCyan));
+    opacity: 1;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+        transition: all 100ms ease-out;
+    }
 }

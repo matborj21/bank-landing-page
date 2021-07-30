@@ -1,2 +1,2 @@
-"use strict";console.log("Hello world");
+"use strict";var navMenubtn=document.querySelector(".navbar__menu"),navLink=document.querySelector(".navbar__links"),linkContainer=document.querySelector(".navbar__links_container"),linkBtn=document.querySelectorAll(".link");navMenubtn.addEventListener("click",(function(){linkContainer.classList.toggle("show")})),linkBtn.forEach((function(n){n.addEventListener("click",(function(){linkContainer.classList.remove("show")}))}));
 //# sourceMappingURL=script.js.map
