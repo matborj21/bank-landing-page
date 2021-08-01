@@ -14,7 +14,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-inter);
-    // background-color: var(--lightGrayishBlue);
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    background-color: var(--veryLightGray);
+    ;
 }
 
 img {

@@ -6,8 +6,11 @@
     .container {
         width: 85%;
         margin: 0 auto;
+        @include breakpoint(large) {
+            width: 84%;
+        }
         @include breakpoint(xlarge) {
-            margin: 0 rem(170);
+            width: 78%;
         }
     }
     &__text {
