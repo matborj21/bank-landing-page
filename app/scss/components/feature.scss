@@ -1,1 +1,89 @@
 @use '../util' as *;
+.feature {
+    background-color: var(--lightGrayishBlue);
+    text-align: center;
+    padding: rem(70) 0;
+    .container {
+        width: 85%;
+        margin: 0 auto;
+        @include breakpoint(xlarge) {
+            margin: 0 rem(170);
+        }
+    }
+    &__text {
+        margin: 0 auto;
+        max-width: rem(620);
+        h2 {
+            font-size: rem(30);
+            font-weight: 300;
+        }
+        p {
+            color: var(--grayishBlue);
+            font-weight: 500;
+        }
+        @include breakpoint(large) {
+            text-align: left;
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+    &__grid {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        @include breakpoint(medium) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: rem(20);
+        }
+        @include breakpoint(large) {
+            text-align: left;
+        }
+        &_item {
+            img {
+                width: rem(75);
+                margin: rem(35) auto;
+                @include breakpoint(large) {
+                    width: rem(85);
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+                @include breakpoint(xlarge) {
+                    width: rem(95);
+                }
+            }
+            h2 {
+                font-size: rem(20);
+                font-weight: 300;
+                @include breakpoint(large) {
+                    font-size: rem(15);
+                    text-align: left;
+                }
+                @include breakpoint(xlarge) {
+                    font-size: rem(30);
+                }
+            }
+            h3 {
+                font-size: rem(20);
+                font-weight: 300;
+                @include breakpoint(large) {
+                    font-size: rem(18);
+                    text-align: left;
+                }
+                @include breakpoint(xlarge) {
+                    font-size: rem(22);
+                }
+            }
+            P {
+                font-weight: 300;
+                font-size: rem(13);
+                color: var(--grayishBlue);
+                @include breakpoint(large) {
+                    font-size: rem(15);
+                }
+                @include breakpoint(xlarge) {
+                    font-size: rem(17);
+                }
+            }
+        }
+    }
+}
