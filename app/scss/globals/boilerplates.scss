@@ -17,17 +17,23 @@ body {
     background-color: var(--lightGrayishBlue);
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 ul,
 li {
     list-style: none;
 }
 
 // style for buttons
-.btn-cta {
+.btn {
     font-weight: 700;
     border: none;
-    border-radius: 20px;
+    border-radius: rem(20);
     color: var(--white);
+    padding: rem(10) rem(30);
     text-transform: capitalize;
     background: linear-gradient(to right, var(--limeGreen), var(--rightCyan));
     opacity: 1;

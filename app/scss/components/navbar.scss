@@ -9,7 +9,7 @@
     margin: 0 auto;
     width: 100%;
     padding: 0 rem(25);
-    // background-color: var(--white);
+    background-color: var(--white);
     z-index: 11;
     @include breakpoint(medium) {
         padding: 0 rem(50);
@@ -57,7 +57,7 @@
     &__links_container {
         position: absolute;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         top: 100%;
         left: 0;
         transform: translateY(-10%);
@@ -116,9 +116,8 @@
             justify-content: space-around;
         }
     }
-    .btn-cta {
+    .btn-nav {
         display: none;
-        padding: rem(10) rem(30);
         font-size: rem(14);
         @include breakpoint(large) {
             display: block;

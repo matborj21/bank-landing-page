@@ -1,1 +1,116 @@
 @use '../util' as *;
+.hero {
+    @include breakpoint(medium) {
+        min-height: rem(558);
+    }
+    @include breakpoint(large) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: rem(458);
+        justify-content: center;
+    }
+    @include breakpoint(xlarge) {
+        min-height: rem(658);
+    }
+    &__image {
+        position: relative;
+        background: url('../../../images/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: rem(285);
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url('../../../images/image-mockups.png');
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position: center bottom;
+        }
+        @include breakpoint(small) {
+            background: url('../../../images/bg-intro-desktop.svg');
+            background-position: 54% 62%;
+            &::after {
+                background-size: 70%;
+            }
+        }
+        @include breakpoint(medium) {
+            background: url('../../../images/bg-intro-desktop.svg');
+            background-position: 15% 68%;
+            &::after {
+                background-size: 50%;
+            }
+        }
+        @include breakpoint(large) {
+            background: url('../../../images/bg-intro-desktop.svg');
+            background-position: 17% 83%;
+            background-size: 150%;
+            &::after {
+                background-size: contain;
+                height: 137%;
+                left: 19%;
+                top: -13%;
+            }
+        }
+        @include breakpoint(xlarge) {
+            background-position: 16% 75%;
+            background-size: 150%;
+            &::after {
+                height: 150%;
+                top: -28%;
+            }
+        }
+    }
+    &__text {
+        align-self: center;
+        margin: rem(50) rem(35);
+        h1 {
+            text-align: center;
+            font-size: rem(40);
+            font-weight: 300;
+            color: var(--darkBlue);
+            @include breakpoint(large) {
+                text-align: start;
+            }
+        }
+        p {
+            color: var(--grayishBlue);
+            font-size: rem(14);
+            line-height: 1.7;
+            @include breakpoint(medium) {
+                text-align: center;
+                font-size: rem(15);
+            }
+            @include breakpoint(large) {
+                text-align: left;
+                font-size: 1rem;
+            }
+            @include breakpoint(xlarge) {
+                font-size: rem(20);
+            }
+        }
+        .btn-hero {
+            display: block;
+            margin: rem(20) auto;
+            padding: rem(10) rem(40);
+            font-size: rem(15);
+            font-weight: 300;
+            border-radius: rem(25);
+            @include breakpoint(large) {
+                display: inline-block;
+            }
+        }
+        @include breakpoint(medium) {
+            margin: rem(50);
+        }
+        @include breakpoint(large) {
+            order: -1;
+            margin-left: rem(100);
+        }
+        @include breakpoint(xlarge) {
+            margin-left: rem(170);
+        }
+    }
+}
