@@ -32,12 +32,8 @@
     }
     &__grid {
         display: grid;
-        justify-content: center;
-        align-content: center;
-        @include breakpoint(medium) {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: rem(20);
-        }
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: rem(20);
         @include breakpoint(large) {
             text-align: left;
         }

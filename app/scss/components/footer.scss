@@ -1,1 +1,114 @@
 @use '../util' as *;
+footer {
+    background-color: var(--darkBlue);
+    color: var(--white);
+    text-align: center;
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: rem(50) rem(40);
+        @include breakpoint(medium) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        //**socmed logo/icons 
+        .logo-socmed {
+            .logo-footer {
+                margin: 0 auto;
+                margin-bottom: rem(30);
+                background: url('../../../images/logo-footer.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: rem(32);
+                width: rem(140);
+                @include breakpoint(medium) {
+                    margin-left: 0;
+                }
+            }
+            .fa {
+                display: inline-block;
+                width: rem(25);
+                height: rem(25);
+                &:not(:last-child) {
+                    margin-right: rem(15);
+                }
+            }
+            .fa-fb {
+                background: url('../../../images/icon-facebook.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .fa-yt {
+                background: url('../../../images/icon-youtube.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .fa-twr {
+                background: url('../../../images/icon-twitter.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .fa-pin {
+                background: url('../../../images/icon-pinterest.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .fa-ig {
+                background: url('../../../images/icon-instagram.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+        //* nav links
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            li {
+                margin-bottom: rem(20);
+                @include breakpoint(medium) {
+                    margin-right: rem(60);
+                    &:nth-child(4) {
+                        margin-left: rem(34);
+                    }
+                }
+            }
+            @include breakpoint(medium) {
+                max-width: rem(285);
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: start;
+            }
+        }
+        //* copy rights
+        .credits {
+            color: var(--grayishBlue);
+        }
+        // * footer href links
+        a,
+        a:visited,
+        a:active {
+            color: var(--lightGrayishBlue);
+            &:hover {
+                color: var(--grayishBlue);
+            }
+        }
+        .btn-footer {
+            padding: rem(15) rem(40);
+            @include breakpoint(large) {
+                // margin-left: 100%;
+            }
+        }
+        .attribution {
+            a,
+            a:visited,
+            a:active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

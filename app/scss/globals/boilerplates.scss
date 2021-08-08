@@ -17,7 +17,6 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     background-color: var(--veryLightGray);
-    ;
 }
 
 img {
@@ -28,6 +27,7 @@ img {
 ul,
 li {
     list-style: none;
+    padding: 0;
 }
 
 // style for buttons

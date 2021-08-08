@@ -1,1 +1,51 @@
 @use '../util' as *;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: rem(20);
+    margin-bottom: 20px;
+    // @include breakpoint(medium) {
+    // }
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+    &__head {
+        background-color: var(--white);
+        min-height: rem(200);
+        img {
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: 200px;
+        }
+    }
+    &__body {
+        margin: rem(35);
+        color: var(--grayishBlue);
+        overflow: hidden;
+        h4 {
+            margin-top: rem(30);
+            color: var(--darkBlue);
+            font-size: rem(18);
+            font-weight: 300;
+            @include breakpoint(large) {
+                font-size: rem(15);
+            }
+        }
+        span {
+            font-size: rem(12);
+            @include breakpoint(large) {
+                font-size: rem(11);
+            }
+        }
+        p {
+            font-size: rem(13);
+            @include breakpoint(large) {
+                font-size: rem(12);
+            }
+        }
+    }
+}
