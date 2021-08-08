@@ -7,6 +7,8 @@ const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
+const exec = require('child_process').exec; // run command-line programs from gulp
+const execSync = require('child_process').execSync; // command-line reports
 
 
 
